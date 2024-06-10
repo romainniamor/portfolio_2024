@@ -12,4 +12,7 @@ export default function Header() {
 const HeaderStyled = styled.div`
   flex: 1;
   background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
