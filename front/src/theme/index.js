@@ -1,13 +1,11 @@
 const colors = {
-  dark: "#17161a",
+  dark: "#030712",
   light: "#ffffff",
-  background_white: "#f5f5f7",
-  background_dark: "#292729",
-  primary: "#f3c4bb",
-  greyLight: "#e4e5e9",
-  greyMedium: "#a7a8ad",
-  greySemiDark: "#93a2b1",
-  greyDark: "#6f737e",
+  background_white: "#f9fafb",
+  background_dark: "#030712",
+  primary: "#EA580C",
+  greyLight: "#f3f4f6",
+  greyDark: "#374151",
 };
 
 const spacing = {
