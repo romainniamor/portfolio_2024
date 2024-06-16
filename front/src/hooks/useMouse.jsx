@@ -4,7 +4,9 @@ const useMousePosition = () => {
   const [mousePosition, setMousePosition] = useState({ x: null, y: null });
 
   const updateMousePosition = (e) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
+    const xPercent = (e.clientX / window.innerWidth) * 100;
+    const yPercent = (e.clientY / window.innerHeight) * 100;
+    setMousePosition({ x: xPercent, y: yPercent });
   };
 
   useEffect(() => {

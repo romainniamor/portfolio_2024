@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { theme } from "../../theme";
+import useMousePosition from "../../hooks/useMouse";
+import { gsap } from "gsap";
 
 export default function Header() {
+  const { x, y } = useMousePosition();
+  console.log("x:", x, "y:", y);
+
+  useEffect(() => {
+    if (x !== null && y !== null) {
+      gsap.to(".overlay", {
+        "--x": `${x}%`,
+        "--y": `${y}%`,
+        duration: 0.2,
+        ease: "sine.out",
+      });
+    }
+  }, [x, y]);
+
   return (
     <HeaderStyled>
       <section>
@@ -34,7 +50,7 @@ const HeaderStyled = styled.div`
       width: 100vw;
       height: 100vh;
 
-      clip-path: circle(170px at 50% 50%);
+      clip-path: circle(170px at var(--x) var(--y));
     }
   }
 `;
