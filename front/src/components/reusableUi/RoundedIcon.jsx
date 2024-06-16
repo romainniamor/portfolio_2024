@@ -17,7 +17,7 @@ const RoundedIconStyled = styled.div`
   justify-content: center;
   align-items: center;
   a {
-    font-size: 50px;
+    font-size: 25px;
     transition: all 0.3s ease-in-out;
     color: ${theme.colors.greyDark};
     &:hover {
