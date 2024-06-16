@@ -1,21 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import AsideLeft from "./asideLeft/AsideLeft";
-import AsideRight from "./asideRight/AsideRight";
+import Footer from "./footer/Footer";
 import Header from "./main/Header";
+import NavBar from "./nav/NavBar";
 
 export default function Home() {
   return (
     <HomeStyled>
-      <AsideLeft />
+      <NavBar />
       <Header />
-      <AsideRight />
+      <Footer />
     </HomeStyled>
   );
 }
 
 const HomeStyled = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100vw;
   min-height: 100vh;
 `;
