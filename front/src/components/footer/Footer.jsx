@@ -27,8 +27,6 @@ const FooterStyled = styled.ul`
   width: min-content;
   position: fixed;
   bottom: 50px;
-  left: 0px;
-
-
-  }
+  left: 30px;
+  z-index: 100;
 `;

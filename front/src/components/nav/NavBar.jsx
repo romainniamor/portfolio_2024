@@ -12,8 +12,13 @@ export default function AsideRight() {
 }
 
 const NavBarStyled = styled.div`
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
   align-items: center;
+  padding: 20px 30px;
+  z-index: 100;
 `;

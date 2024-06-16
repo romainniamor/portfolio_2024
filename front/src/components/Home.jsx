@@ -15,8 +15,7 @@ export default function Home() {
 }
 
 const HomeStyled = styled.div`
-  display: flex;
-  flex-direction: column;
+  position: relative;
   width: 100vw;
   min-height: 100vh;
 `;
