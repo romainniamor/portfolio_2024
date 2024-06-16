@@ -45,7 +45,6 @@ export default function MagneticLink({ children }) {
 const MagneticLinkStyled = styled.div`
   cursor: pointer;
   position: relative;
-  padding: 10px;
   border-radius: 50%;
   display: flex;
   justify-content: center;

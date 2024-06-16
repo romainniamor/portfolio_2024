@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import gsap from "gsap";
+import { theme } from "../../theme";
 
 export default function HoverLink({ label }) {
   const labelOver = useRef(null);
@@ -35,10 +36,11 @@ const StyledHoverLink = styled.div`
   line-height: 1;
   overflow: hidden;
   text-transform: uppercase;
+  color: ${theme.colors.greyLight};
 `;
 
 const StyledLabelOver = styled.div`
-  color: rgba(150, 150, 150, 0.2);
+  opacity: 20%;
   text-transform: uppercase;
   text-align: right;
 `;
@@ -47,6 +49,5 @@ const StyledLabelBelow = styled.div`
   position: absolute;
   bottom: -100%;
   right: 0;
-  color: rgba(150, 150, 150, 1);
   text-align: right;
 `;

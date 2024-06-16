@@ -1,6 +1,6 @@
 const colors = {
   dark: "#030712",
-  light: "#ffffff",
+  light: "#cccccc",
   background_white: "#f9fafb",
   background_dark: "#030712",
   primary: "#EA580C",
