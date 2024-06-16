@@ -1,9 +1,10 @@
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   background-color: #131313;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  display: flex;
-  justify-content: center;
 }
