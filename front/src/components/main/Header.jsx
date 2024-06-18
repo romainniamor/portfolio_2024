@@ -1,21 +1,17 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { theme } from "../../theme";
-import useMousePosition from "../../hooks/useMouse";
+import useMousePosition from "../../hooks/useMousePosition";
+import useOverlaySize from "../../hooks/useOverlaySize";
 import { gsap } from "gsap";
+import { useContext } from "react";
+import AppContext from "../../contexts/appContext";
 
 export default function Header() {
   const { x, y } = useMousePosition();
-  const [isHovered, setIsHovered] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
-  // Taille de l'overlay
-  const size = () => {
-    if (!isVisible) return 0;
-    if (isHovered) return 100;
-    return 15;
-  };
-
+  const { isVisible, setIsVisible, isHovered, setIsHovered } =
+    useContext(AppContext);
+  const size = useOverlaySize();
   useEffect(() => {
     // L'overlay n'apparait qu au mouv de la souris
     if (x !== 0 || y !== 0) {
@@ -40,7 +36,12 @@ export default function Header() {
         onMouseEnter={() => setIsVisible(true)}
         onMouseLeave={() => setIsVisible(false)}
       >
-        <h1>Header</h1>
+        <h1
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          Header
+        </h1>
       </section>
     </HeaderStyled>
   );
