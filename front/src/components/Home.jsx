@@ -1,12 +1,20 @@
-import React from "react";
 import styled from "styled-components";
 import Footer from "./footer/Footer";
 import Header from "./main/Header";
 import NavBar from "./nav/NavBar";
 import AppContext from "../contexts/appContext";
+import { useState } from "react";
 
 export default function Home() {
-  const appContextValue = {};
+  const [isHovered, setIsHovered] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const appContextValue = {
+    isVisible,
+    setIsVisible,
+    isHovered,
+    setIsHovered,
+  };
 
   return (
     <AppContext.Provider value={appContextValue}>
